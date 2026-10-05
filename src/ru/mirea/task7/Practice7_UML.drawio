@@ -1,0 +1,65 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Практика 7" id="p7uml">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="mov" value="«interface»&lt;br&gt;&lt;b&gt;Movable&lt;/b&gt;" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="320" y="30" width="220" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="mov_line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="mov">
+          <mxGeometry y="40" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="mov_methods" value="+moveUp(): void&lt;br&gt;+moveDown(): void&lt;br&gt;+moveLeft(): void&lt;br&gt;+moveRight(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="mov">
+          <mxGeometry y="48" width="220" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="pt" value="MovablePoint" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="270" width="300" height="234" as="geometry" />
+        </mxCell>
+        <mxCell id="pt_fields" value="~x: int&lt;br&gt;~y: int&lt;br&gt;~xSpeed: int&lt;br&gt;~ySpeed: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;whiteSpace=wrap;" vertex="1" parent="pt">
+          <mxGeometry y="26" width="300" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="pt_line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="pt">
+          <mxGeometry y="98" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="pt_methods" value="+MovablePoint(x: int, y: int,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;xSpeed: int, ySpeed: int)&lt;br&gt;+toString(): String&lt;br&gt;+moveUp(): void&lt;br&gt;+moveDown(): void&lt;br&gt;+moveLeft(): void&lt;br&gt;+moveRight(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;whiteSpace=wrap;" vertex="1" parent="pt">
+          <mxGeometry y="106" width="300" height="128" as="geometry" />
+        </mxCell>
+
+        <mxCell id="rect" value="MovableRectangle" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="500" y="270" width="340" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="rect_fields" value="-topLeft: MovablePoint&lt;br&gt;-bottomRight: MovablePoint" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;whiteSpace=wrap;" vertex="1" parent="rect">
+          <mxGeometry y="26" width="340" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rect_line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="rect">
+          <mxGeometry y="66" width="340" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="rect_methods" value="+MovableRectangle(x1: int, y1: int, x2: int, y2: int,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;xSpeed: int, ySpeed: int)&lt;br&gt;+MovableRectangle(topLeft: MovablePoint,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;bottomRight: MovablePoint)&lt;br&gt;+speedTest(): boolean&lt;br&gt;+toString(): String&lt;br&gt;+moveUp(): void&lt;br&gt;+moveDown(): void&lt;br&gt;+moveLeft(): void&lt;br&gt;+moveRight(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;whiteSpace=wrap;" vertex="1" parent="rect">
+          <mxGeometry y="74" width="340" height="196" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" value="" style="endArrow=block;endSize=16;endFill=0;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="pt" target="mov">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" style="endArrow=block;endSize=16;endFill=0;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="rect" target="mov">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="" style="endArrow=none;startArrow=diamondThin;startFill=0;startSize=16;html=1;rounded=0;" edge="1" parent="1" source="rect" target="pt">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="400" as="sourcePoint" />
+            <mxPoint x="340" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl1" value="1" style="text;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="470" y="372" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl2" value="2" style="text;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="350" y="372" width="20" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
